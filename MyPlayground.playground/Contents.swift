@@ -1,3 +1,11 @@
 import Cocoa
 
-func Count (count: [Int]?) -> Int {let result = (1...100)}
+func randomNumIfLet(nums:[Int]?) -> Int {
+    if let numbers = nums?.randomElement(){
+        return numbers
+    }
+    return Int.random(in: 1...100)
+}
+
+print (randomNumIfLet(nums:[] ))
+print (randomNumIfLet(nums: [1, 2]))
